@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="カフェ">
+    <meta name="discription" content="">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+    <title>egg baby café</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__wrapper">
+            <h1><a href="#" id="logobtn"><img src="images/logo.png" alt="egg baby café"></a></h1>
+            <nav class="navigation__main">
+                <ul>
+                    <li><a href="index.html" id="online">OnlineOrder</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="text1">
+            <h2 class="rich-text">
+                <span class="big-rich-text">La vie est belle.</span>
+            </h2>
+        </div>
+    </header>
+
+    <main class="online__main__content" x-data="menuData()">
+        <h2 id="ee">MENU</h2>
+        <section class="online__menu__main">
+            <div class="online__menu__area">
+                <ul>
+                    <li>Ａ　Egg Baby sand with French fries　&yen;990<br>エッグベイビーサンド with フレンチフライ</li>
+                    <li>Ｂ　Egg Bacon Toast with French Fries　&yen;880<br>エッグトースト with フレンチフライ</li>
+                    <li>Ｃ　Raspadura Carbonara with Bread　&yen;1,100<br>エッグベイビーカルボナーラ with 自家製パン</li>
+                    <li>Ｄ　Egg and Farmer vegetabale power salad with Bread　&yen;1,100<br>たまごとファーマー野菜のパワーサラダ with 自家製パン
+                    </li>
+                </ul>
+            </div>
+            <div class="online__order__area">
+                <template x-for="(item, index) in items" :key="index">
+                    <form class="numberform">
+                        <div class="number-area">
+                            <input type="button" value="-" @click="if(item.quantity > 0) { item.quantity--; }"
+                                class="minus">
+                            <input type="text" x-model="item.quantity" class="number" readonly>
+                            <input type="button" value="+" @click="item.quantity++" class="plus">
+                        </div>
+                        <h4 class="midashi-price">金額：<span x-text="item.price * item.quantity"></span>円</h4>
+                    </form>
+                </template>
+
+                <div class="buybtn-area" x-data="{ buy: false }">
+                    <button @click="buy = true" class="buybtn"
+                        style="display: flex; align-items: center; justify-content: center;">購入</button>
+
+                    <div x-show="buy" class="buy-message"
+                        style="display: flex; align-items: center; justify-content: center; background-color: rgb(62, 62, 62); color: rgb(193, 193, 193); margin-top: 2rem; width: 30rem; height: 5rem; border-radius: 25rem; font-size: 1.4rem; font-weight: bold;">
+                        ご利用ありがとうございました。
+                    </div>
+
+                    <div x-show="buy" class="buy-message"
+                        style="display: flex; align-items: center; justify-content: center; background-color: rgb(62, 62, 62); color: rgb(193, 193, 193); margin-top: 2rem; width: 30rem; height: 5rem; border-radius: 25rem; font-size: 1.4rem; font-weight: bold;">
+                        合計金額：<span x-text="total"></span>円</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <h3>egg baby café</h3>
+        <div class="footer__flex">
+            <div class="footer__info">
+                <ul>
+                    <li>営業時間：10:00～22:00</li>
+                    <li>定休日：不定休</li>
+                    <li>※状況により営業時間、メニュー内容が変更になる事もございます。</li>
+                    <li><small>&copy; 2024 Gyoann</small></li>
+                </ul>
+            </div>
+            <nav class="footer__navigation">
+                <ul>
+                    <li><a href="index.html" id="online">online</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="js/jquery.sublimeSlideshow.js"></script>
+    <script>
+        $(function () {
+            $.sublime_slideshow({
+                src: [
+                    { url: "images/main_img001.jpg" },
+                    { url: "images/main_img002.jpg" },
+                    { url: "images/main_img003.jpg" },
+                    { url: "images/main_img004.jpg" },
+                    { url: "images/main_img005.jpg" },
+                    { url: "images/main_img006.jpg" }
+                ],
+                duration: 6,
+                fade: 1,
+                scaling: 0.99,
+                rotating: 1,
+                overlay: "images/pattern5.png"
+            });
+        });
+
+        function menuData() {
+            return {
+                items: [
+                    { price: 990, quantity: 0 },
+                    { price: 880, quantity: 0 },
+                    { price: 1100, quantity: 0 },
+                    { price: 1100, quantity: 0 },
+                ],
+                get total() {
+                    return this.items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

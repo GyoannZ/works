@@ -1,0 +1,284 @@
+body {
+    box-sizing: border-box;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.firstV {
+    height: 100vh;
+    width: 100vw;
+    background-color: aqua;
+}
+
+.secondV {
+    height: 100vh;
+    width: 100vw;
+    background-color: chartreuse;
+}
+
+.main {
+    display: flex;
+}
+
+.main__slider {
+    width: 30%;
+    background-color: deeppink;
+}
+
+
+.main__wrap {
+    width: 70%;
+}
+
+/* ----------------wrap__info---------------- */
+
+
+
+
+
+.wrap__info {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+.wrap__pattern {
+    background: url(/img/pattern5.png) repeat;
+    z-index: 100;
+}
+
+
+@keyframes wrap__infoshow {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    28% {
+        opacity: 1;
+    }
+
+    38% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.wrap__info img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: wrap__infoshow 18s linear infinite;
+    object-fit: cover;
+    z-index: -10;
+}
+
+.wrap__info img:nth-child(2) {
+    animation-delay: 6s;
+}
+
+.wrap__info img:nth-child(3) {
+    animation-delay: 12s;
+}
+
+
+
+
+/* ----------------/wrap__info---------------- */
+
+
+
+
+
+
+.wrap__contents {
+    width: 95%;
+    margin: 0 auto;
+    /* background-color: violet; */
+    display: flex;
+}
+
+.contents__hato {
+    width: 20%;
+    background-color: lightsalmon;
+}
+
+.contents__MLO {
+    height: 350vh;
+    width: 80%;
+    /* background-color: mediumslateblue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.MLO__M {
+    height: 100vh;
+    background-color: springgreen;
+}
+
+.MLO__O {
+    height: 100vh;
+    background-color: springgreen;
+}
+
+
+
+
+/* ----------------credit---------------- */
+
+
+
+
+
+.credit {
+    width: 100vw;
+    display: flex;
+    background: url(/img/credit_BG.png) no-repeat;
+}
+
+.credit__slider {
+    width: 30%;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.slider__title {
+    display: flex;
+    height: 60%;
+    align-items: flex-end;
+}
+
+.main__title {
+    writing-mode: vertical-lr;
+}
+
+.main__title p span {
+    letter-spacing: 1em;
+}
+
+.sub__title {
+    writing-mode: vertical-lr;
+    display: grid;
+    height: 50%;
+    justify-items: end;
+}
+
+.sub__title p {
+    font-size: 10px;
+}
+
+.sub__title p span {
+    letter-spacing: .2em;
+    font-size: 10px;
+}
+
+.credit__staff {
+    width: 70%;
+    margin: auto;
+}
+
+.staff__title {
+    letter-spacing: .2em;
+}
+
+.credit__staff .staff {
+    display: flex;
+    margin: 0 0 60px;
+}
+
+.staff {
+    width: 98%;
+}
+
+.staff__bg {
+    background: url(img/staff_bg.svg) no-repeat;
+    background-position: 0 0;
+    width: 60%;
+    height: 550px;
+}
+
+.staff__bg2 {
+    background: url(img/staff_bg2.svg) no-repeat;
+    background-position: 0 0;
+    width: 50%;
+    height: 550px;
+}
+
+.staff__pic__1,
+.staff__pic__2,
+.staff__pic__5,
+.staff__pic__6 {
+    width: 300px;
+    height: 300px;
+    margin: 156px 0 0 54px;
+    object-fit: cover;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.staff__pic__1,
+.staff__pic__5 {
+    z-index: 200;
+}
+
+.staff__pic__1:hover,
+.staff__pic__5:hover {
+    opacity: 0;
+}
+
+.staff__pic__3,
+.staff__pic__4,
+.staff__pic__7,
+.staff__pic__8 {
+    width: 300px;
+    height: 300px;
+    margin: 144px 0 0 159px;
+    object-fit: cover;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.staff__pic__3,
+.staff__pic__7 {
+    z-index: 200;
+}
+
+.staff__pic__3:hover,
+.staff__pic__7:hover {
+    opacity: 0;
+}
+
+.credit__staff .staff:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.staff__text {
+    height: 500px;
+    text-align: center;
+}
+
+.staff__text p {
+    margin-top: 270px;
+}
+
+/* ----------------/credit---------------- */

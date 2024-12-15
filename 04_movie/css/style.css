@@ -1,0 +1,544 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Finger+Paint&family=Protest+Revolution&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "游ゴシック体", "游ゴシック Medium", YuGothic, "Comic Sans MS", sans-serif;
+}
+
+/* Loading背景画面設定　*/
+#splash {
+    /*fixedで全面に固定*/
+    position: fixed;
+    width: 100%;
+    height: 110%;
+    z-index: 10;
+    background: #ffffff;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo img {
+    width: 26rem;
+}
+
+/* fadeUpをするアイコンの動き */
+.fadeUp {
+    animation-name: fadeUpAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header {
+    height: 10vh;
+}
+
+.header__navigation {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: -44%;
+    width: 44%;
+    height: 100vh;
+    /* background: #999999; */
+    background-image: url(../images/post2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: all 0.6s;
+    opacity: 0.98;
+}
+
+.header__navigation.panelactive {
+    right: 0;
+}
+
+.header__navigation.panelactive .navigation__list {
+    position: fixed;
+    z-index: 10;
+    width: 41%;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.header__navigation ul {
+    position: absolute;
+    z-index: 10;
+    top: 15%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+
+.header__navigation ul li {
+    text-align: left;
+}
+
+.header__navigation ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    font-size: 2.9rem;
+    font-family: "Protest Revolution", sans-serif;
+}
+
+.logo__navigation {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+    height: 100%;
+    align-items: center;
+}
+
+.navigation__out {
+    width: 70rem;
+}
+
+.navigation__list__out ul {
+    display: flex;
+    justify-content: space-around;
+    margin-left: -25%;
+    margin-right: 20%;
+    /* margin-top: 6%; */
+}
+
+.navigation__list__out ul li a {
+    font-size: 3rem;
+    font-weight: 400;
+    font-family: "Protest Revolution", sans-serif;
+}
+
+.navigation__list__out ul li a:first-child,
+.header__navigation ul li a:first-child {
+    position: relative;
+}
+
+
+.navigation__list__out ul li a:first-child::before,
+.header__navigation ul li a:first-child::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -.9rem;
+    height: 0;
+    width: 0;
+    background-color: rgb(186, 9, 9);
+    transition: .5s;
+}
+
+.header__navigation ul li a:first-child::before {
+    bottom: .3rem;
+}
+
+.navigation__list__out ul li a:first-child:hover::before,
+.header__navigation ul li a:first-child:hover::before {
+    width: 100%;
+    height: .2rem;
+}
+
+.openbtn {
+    position: fixed;
+    z-index: 20;
+    top: 2vh;
+    right: 1rem;
+    cursor: pointer;
+    width: 5rem;
+    height: 5rem;
+    /* display: none; */
+}
+
+.openbtn span {
+    display: inline-block;
+    transition: all 0.4s;
+    position: absolute;
+    left: 1.4rem;
+    height: 0.3rem;
+    border-radius: 0.2rem;
+    background-color: #666666;
+    width: 45%;
+}
+
+.openbtn span:nth-of-type(1) {
+    top: 1.5rem;
+    width: 45%;
+}
+
+.openbtn span:nth-of-type(2) {
+    top: 2.3rem;
+    width: 35%;
+}
+
+.openbtn span:nth-of-type(3) {
+    top: 3.1rem;
+    width: 20%;
+}
+
+.openbtn.active span:nth-of-type(1) {
+    top: 1.8rem;
+    left: 1.8rem;
+    transform: translateY(0.6rem) rotate(-135deg);
+    width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3) {
+    top: 3rem;
+    left: 1.8rem;
+    transform: translateY(-0.6rem) rotate(135deg);
+    width: 30%;
+}
+
+.header__logo h1 {
+    width: 18rem;
+    margin: -4rem 0rem -4rem 0rem;
+    padding: 0;
+}
+
+.header__logo h1 a img {
+    width: 100%;
+}
+
+.main__visual {
+    width: 100vw;
+    height: 90vh;
+}
+
+.main__visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*========= 背景動画設定のCSS ===============*/
+
+/* youtube設定 */
+
+#youtube-area {
+    position: fixed;
+    z-index: -1;
+    /*最背面に設定*/
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+/*jQueryで付与されたappearクラスがついたらYoutubeエリアをふわっと表示*/
+#youtube-area.appear {
+    animation-name: PageAnimeAppear;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes PageAnimeAppear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.6;
+    }
+}
+
+#youtube {
+    /*中央配置*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*縦横幅指定*/
+    width: 177.77777778vh;
+    /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+    height: 56.25vw;
+    /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+    min-height: 100%;
+    min-width: 100%;
+}
+
+/*youtubeがクリックされないためのマスク*/
+#youtube-mask {
+    position: absolute;
+    z-index: 2;
+    /*下から2番目に表示*/
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/pattern5.png);
+}
+
+.content__area__story {
+    height: 100vh;
+}
+
+.content__area__story,
+.content__area__voice-cast {
+    background-color: rgba(0, 0, 0, 0.6);
+    /* height: 200rem; */
+    /* background-image: url(../images/pattern5.png); */
+}
+
+.text__story,
+.text__characters,
+.second__text__characters,
+.text__voice-cast,
+.second__text__voice-cast {
+    font-size: 13rem;
+    font-weight: bold;
+    writing-mode: vertical-rl;
+    position: absolute;
+    margin-top: 20rem;
+    /* margin-left: -2rem; */
+    left: 2vw;
+    color: #f22f3994;
+    white-space: nowrap;
+}
+
+.text__characters,
+.second__text__voice-cast {
+    right: 2vw;
+}
+
+.second__text__characters,
+.text__voice-cast {
+    margin-top: 140rem;
+}
+
+.content__wrapper__story {
+    width: 96rem;
+    margin: 0 auto;
+    height: 100vh;
+    /* background-color: rgba(0, 0, 0, 0.6); */
+    border-radius: .4rem;
+    padding: 4rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.content__area__characters {
+    background-color: #282424;
+}
+
+.content__wrapper__characters {
+    width: 96rem;
+    margin: 0 auto;
+    padding: 4rem;
+}
+
+.content__text__story {
+    width: 100%;
+    height: 100%;
+}
+
+.content__text__body__story {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100%;
+    align-items: center;
+}
+
+.content__text__story h2,
+.content__text__characters h2,
+.content__text__voice-cast h2 {
+    font-size: 5rem;
+    font-weight: bold;
+    /* font-family: 'ink free'; */
+    color: #f22f39c5;
+}
+
+.content__text__story p,
+.content__text__body__characters {
+    margin-top: 4rem;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    text-align: justify;
+    color: #d1d6c0;
+}
+
+.content__text__story p {
+    margin-left: 4rem;
+    writing-mode: vertical-rl;
+    width: 100%;
+    height: 50rem;
+}
+
+.eachTextAnime span {
+    opacity: 0;
+}
+
+.eachTextAnime.appeartext span {
+    animation: text_anime_on 1s ease-out forwards;
+}
+
+@keyframes text_anime_on {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* .content__img__story {
+    width: 50%;
+} */
+
+/* .content__img__story img {
+    width: 90%;
+    margin-top: 10rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    opacity: 0.9;
+    border-radius: .4rem;
+} */
+
+.characters__out {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10rem;
+}
+
+.content__text__characters .characters__out:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.content__text__title__characters {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #d1d6c0;
+}
+
+.characters__in {
+    width: 40%;
+    margin: auto;
+}
+
+.characters__img {
+    margin: 0 auto;
+}
+
+.characters__img img {
+    width: 20rem;
+    border-radius: .4rem;
+}
+
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.5s, transform 1s;
+}
+
+.fade.active {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.voice-cast__img {
+    display: flex;
+    justify-content: center;
+    opacity: 0.9;
+}
+
+.content__text__title__voice-cast {
+    font-size: 2.3rem;
+    font-weight: bold;
+    color: #d1d6c0;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    justify-content: center;
+    font-family: "UD デジタル 教科書体 N-B", "UD Digi Kyokasho N-B";
+}
+
+.voice__character {
+    padding-top: 10rem;
+}
+
+.voice__character img {
+    width: 20rem;
+}
+
+.content__wrapper__voice-cast {
+    margin: 0 auto;
+    width: 96rem;
+    padding: 4rem;
+}
+
+.footer {
+    background-image: url(../images/the_dragon_dentist.png);
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+}
+
+.footer__copyright {
+    width: 96rem;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end
+}
+
+.footer__copyright small {
+    margin: 0 auto;
+}
+
+#page-top {
+    --offset: 100px;
+    position: fixed;
+    z-index: 10;
+    top: 90vh;
+    right: 0;
+    display: none;
+    background-color: #282424;
+    padding: 1rem;
+    border-radius: 25% 0 0 25%;
+    opacity: 0.4;
+}
+
+#page-top span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #666666;
+}

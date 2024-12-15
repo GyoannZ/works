@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+/* *,:after,:before {
+    border: 0 solid;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} */
+
+body {
+    /* font-family: "游ゴシック体", YuGothic, sans-serif; */
+    /* font-family: YakuHanJP_Narrow, Yu Gothic Medium, 游ゴシック Medium, "游ゴシック体", YuGothic, Hiragino Kaku Gothic ProN, Comic Sans MS, Hiragino Sans, メイリオ, Meiryo, sans-serif; */
+    font-family: YakuHanJP_Narrow, Yu Gothic Medium, 游ゴシック Medium, "游ゴシック体", YuGothic, Hiragino Kaku Gothic ProN, Comic Sans MS, Hiragino Sans, メイリオ, Meiryo, sans-serif;
+    margin: 0 auto;
+    background-image: url(images/abstract-pattern-background-vector.jpg);
+    color: #ffffe7;
+    /* background-color:#666;   */
+    background-color:rgba(255,255,255,0.8);
+    background-blend-mode:lighten;
+}
+
+.wrapper {
+    width: 850px;
+    margin: 0 auto;
+    padding: 10px 100px;
+    /* background-color:#666;   */
+    border-radius: 20px 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* background-image: url(images/abstract-pattern-background-vector.jpg); */
+    background-color:rgba(72, 66, 66, 0.92);
+    background-blend-mode:lighten;
+}
+
+h1 {
+    /* opacity: 0.7; */
+    /* 文字の色を指定する */
+    /* 文字の大きさを指定する */
+    font-size: 40px;
+    /* 文字の位置を指定する */
+    text-align: center;
+    /* 文字間隔を指定する */
+    letter-spacing: 0.4em;
+    background-color:rgba(54, 49, 49, 0.8);
+    background-blend-mode:lighten;
+    border-radius: 20px 20px;   
+    width: 300px;
+
+}
+
+.img1 {
+    width: 40%;
+    /* display: inline-block; */
+    margin: 5px;
+    border-radius: 20px 20px;  
+}
+.image {
+    width: 900px;
+    display: flex;
+    justify-content: center;
+}
+
+.ra-men {
+    /* background-image: url(images/abstract-pattern-background-vector.jpg); */
+    padding: 10px;
+    margin: 0;
+    border-radius: 50px 20px;
+    background-repeat: no-repeat;
+    font-size: 13px;
+}
+
+.box {
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.text{
+    /* background-color:rgba(54, 49, 49, 0.8);
+    background-blend-mode:lighten; */
+    border-radius: 20px 20px;
+    padding: 0px 10px;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+}
+
+h2 {
+    background-color:rgba(54, 49, 49, 0.8);
+    background-blend-mode:lighten;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 10px 30px;
+    font-size: 25px;
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 60px;
+}
+
+.footer {
+    width: 850px;
+    height: 200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 100px;
+    background-color:rgba(72, 66, 66, 0.92);
+    background-blend-mode:lighten;
+    border-radius: 20px 20px;
+
+}
+

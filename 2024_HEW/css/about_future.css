@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+body {
+    background-color: rgb(158, 153, 137);
+    color: white;
+}
+
+.now__photo {
+    width: 100%;
+}
+
+
+.photo__list {
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 250px; */
+}
+
+.photo__list img {
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 50px;
+}
+
+.footer {
+    width: 88%;
+}
+
+.footer__message__out__future {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    margin: 250px auto;
+    padding: 0;
+    height: 100vh;
+    text-align: center;
+    background-image: url(../images/future_page/LF-ZL_06.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-position-y: 50px; */
+    background-size: 100%;
+}
+
+.footer__message {
+    font-family: "Monoton", sans-serif;
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="カフェ">
+    <meta name="discription" content="">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+    <title>egg baby café</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__wrapper">
+            <h1><a href="#" id="logobtn"><img src="images/logo.png" alt="egg baby café"></a></h1>
+            <nav class="navigation__main">
+                <ul>
+                    <!-- <li><a href="index.html" id="home">HOME</a></li>
+                    <li><a href="index.html" id="menu">MENU</a></li>
+                    <li><a href="index.html" id="access">ACCESS</a></li>
+                    <li><a href="contact.html" id="contact">CONTACT</a></li> -->
+                    <li><a href="index.html" id="online">OnlineOrder</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="text1">
+            <h2 class="rich-text">
+                <span class="big-rich-text">La vie est belle.</span>
+            </h2>
+        </div>
+    </header>
+
+    <main class="online__main__content" x-data="menuData()">
+        <h2 id="ee">MENU</h2>
+        <section class="online__menu__main">
+            <div class="online__menu__area">
+                <ul>
+                    <li>Ａ　Egg Baby sand with French fries　&yen;990<br>エッグベイビーサンド with フレンチフライ</li>
+                    <li>Ｂ　Egg Bacon Toast with French Fries　&yen;880<br>エッグトースト with フレンチフライ</li>
+                    <li>Ｃ　Raspadura Carbonara with Bread　&yen;1,100<br>エッグベイビーカルボナーラ with 自家製パン</li>
+                    <li>Ｄ　Egg and Farmer vegetabale power salad with Bread　&yen;1,100<br>たまごとファーマー野菜のパワーサラダ with 自家製パン
+                    </li>
+                </ul>
+            </div>
+            <div class="online__order__area">
+                <form class="numberform" x-data="{ number: 0, price1: 0 }">
+                    <div class="number-area">
+                        <input type="button" value="-" @click="if(number > 0) { number--; price1 -= 990 }"
+                            class="minus">
+                        <input type="text" x-model="number" class="number" readonly>
+                        <input type="button" value="+" @click="number++; price1 += 990" class="plus">
+                    </div>
+                    <h4 class="midashi-price">金額：<input type="text" x-model="price1" class="price" readonly>円</h4>
+                </form>
+                <form class="numberform" x-data="{ number: 0, price2: 0 }">
+                    <div class="number-area">
+                        <input type="button" value="-" @click="if(number > 0) { number--; price2 -= 880 }"
+                            class="minus">
+                        <input type="text" x-model="number" class="number" readonly>
+                        <input type="button" value="+" @click="number++; price2 += 880" class="plus">
+                    </div>
+                    <h4 class="midashi-price">金額：<input type="text" x-model="price2" class="price" readonly>円</h4>
+                </form>
+                <form class="numberform" x-data="{ number: 0, price3: 0 }">
+                    <div class="number-area">
+                        <input type="button" value="-" @click="if(number > 0) { number--; price3 -= 1100 }"
+                            class="minus">
+                        <input type="text" x-model="number" class="number" readonly>
+                        <input type="button" value="+" @click="number++; price3 += 1100" class="plus">
+                    </div>
+                    <h4 class="midashi-price">金額：<input type="text" x-model="price3" class="price" readonly>円</h4>
+                </form>
+                <form class="numberform" x-data="{ number: 0, price4: 0 }">
+                    <div class="number-area">
+                        <input type="button" value="-" @click="if(number > 0) { number--; price4 -= 1100 }"
+                            class="minus">
+                        <input type="text" x-model="number" class="number" readonly>
+                        <input type="button" value="+" @click="number++; price4 += 1100" class="plus">
+                    </div>
+                    <h4 class="midashi-price">金額：<input type="text" x-model="price4" class="price" readonly>円</h4>
+                </form>
+
+                <div class="buybtn-area" x-data="{ buy: false }">
+                    <button @click="buy = true" class="buybtn"
+                        style="display: flex; align-items: center; justify-content: center;">購入</button>
+
+                    <div x-show="buy" class="buy-message"
+                        style="display: flex; align-items: center; justify-content: center; background-color: rgb(62, 62, 62); color: rgb(193, 193, 193); margin-top: 2rem; width: 30rem; height: 5rem; border-radius: 25rem; font-size: 1.4rem; font-weight: bold;">
+                        ご利用ありがとうございました。
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <h3>egg baby café</h3>
+        <div class="footer__flex">
+            <div class="footer__info">
+                <ul>
+                    <li>営業時間：10:00～22:00</li>
+                    <li>定休日：不定休</li>
+                    <li>※状況により営業時間、メニュー内容が変更になる事もございます。</li>
+                    <li><small>&copy; 2024 Gyoann</small></li>
+                </ul>
+            </div>
+            <nav class="footer__navigation">
+                <ul>
+                    <li><a href="index.html" id="online">online</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="js/jquery.sublimeSlideshow.js"></script>
+    <script>
+        $(function () {
+            $.sublime_slideshow({
+                src: [
+                    { url: "images/main_img001.jpg" },
+                    { url: "images/main_img002.jpg" },
+                    { url: "images/main_img003.jpg" },
+                    { url: "images/main_img004.jpg" },
+                    { url: "images/main_img005.jpg" },
+                    { url: "images/main_img006.jpg" }
+                ],
+                duration: 6,
+                fade: 1,
+                scaling: 0.99,
+                rotating: 1,
+                overlay: "images/pattern5.png"
+            });
+        });
+
+        // function menuData() {
+        //     return {
+        //         items: [
+        //             { price: 990, quantity: 0 },
+        //             { price: 880, quantity: 0 },
+        //             { price: 1100, quantity: 0 },
+        //             { price: 1100, quantity: 0 },
+        //         ],
+        //         get totalPrice() {
+        //             return this.items.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+        //         }
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

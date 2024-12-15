@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ある日の食卓・張行天</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1></h1>
+    </header>
+
+    <div class="wrapper">
+        <div class="navigation">
+            <div class="nav-pc">
+                <div class="item-logo">
+                    <a href="#"><img src="images/icon.jpg" alt=""></a>
+                </div>
+                <nav class="item-nav">
+                    <ul class="list">
+                        <li><a href="#">BREAKFAST</a></li>
+                        <li><a href="#">LUNCH</a></li>
+                        <li><a href="#">DINNER</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="contents-wrapper">
+            <main>
+                <article class="content">
+                    <h2>EGG BABY CAFE</h2>
+                    <img src="images/S__2236421.jpg" alt="パスタ">
+                    <p>御徒町駅から徒歩３分、朝１０時から営業開始、卵料理専門のCAFEです。今回注文したのはラスパドゥーラカルボナーラ、もちもちの生パスタに濃厚な卵、表面を薄く削ったチーズを合わせ、風味が良い一品です。</p>
+                </article>
+                <article class="content">
+                    <h2>もり一</h2>
+                    <img src="images/83A3FAEF-94FC-45BD-8721-E546AC3F83BF.jpg" alt="寿司">
+                    <p>総武線亀戸駅出てすぐ、もり一回転寿司にたどり着く、席はカウンター席のみ。シャリは赤酢で作った赤シャリ、寿司職人さんに口頭で注文できます、自分が一番好きな寿司屋です。</p>
+                </article>
+                <article class="content">
+                    <h2>SAJILO CAFE</h2>
+                    <div class="largePhotodv">
+                        <img class="largePhoto" src="images/C6B38D69-40B1-4582-B6A0-622F1D54048C.jpg" alt="largePhoto" id="largePhoto">
+                    </div>
+                    <ul class="photos">
+                        <li><img class="smallPhoto" src="images/C6B38D69-40B1-4582-B6A0-622F1D54048C.jpg" alt="花瓶＆時計" id="s1"></li>
+                        <li><img class="smallPhoto" src="images/22133022-1705-4D44-856F-257588454012.jpg" alt="テーブル＆メニュー" id="s2"></li>
+                        <li><img class="smallPhoto" src="images/49687793-83A3-4172-92C7-B340A1B247C1.jpg" alt="テーブル＆料理" id="s3"></li>
+                        <li><img class="smallPhoto" src="images/8A36D2D3-C442-4370-8DAC-1B31704ABF1E.jpg" alt="ナン" id="s4"></li>
+                        <li><img class="smallPhoto" src="images/A188F5DC-9E12-4C89-BDAB-B66ACB2C11E4.jpg" alt="カレー" id="s5"></li>
+                        <li><img class="smallPhoto" src="images/F74D0177-C8C8-480A-9566-98EA700A83FD.jpg" alt="アイスクリーム" id="s6"></li>
+                    </ul>
+                    <p>吉祥寺にあるほんの小さな店だが、こだわりをふんだんに詰めたカフェです、夜になると、お店の照明が明るく過ぎず、暗く過ぎないな空間で食事を楽しめる</p>
+                </article>
+            </main>
+        </div>
+        
+        <footer class="footer">
+            <small>ある日の食卓･張行天</small>
+        </footer>
+    </div>
+
+
+    <script>
+        document.getElementById("s1").addEventListener("mouseover",function(){
+            document.getElementById("largePhoto").src="images/C6B38D69-40B1-4582-B6A0-622F1D54048C.jpg";
+        });
+
+        document.getElementById("s2").addEventListener("mouseover",function(){
+            document.getElementById("largePhoto").src="images/22133022-1705-4D44-856F-257588454012.jpg";
+        });
+
+        document.getElementById("s3").addEventListener("mouseover",function(){
+            document.getElementById("largePhoto").src="images/49687793-83A3-4172-92C7-B340A1B247C1.jpg";
+        });
+
+        document.getElementById("s4").addEventListener("mouseover",function(){
+            document.getElementById("largePhoto").src="images/8A36D2D3-C442-4370-8DAC-1B31704ABF1E.jpg";
+        });
+
+        document.getElementById("s5").addEventListener("mouseover",function(){
+            document.getElementById("largePhoto").src="images/A188F5DC-9E12-4C89-BDAB-B66ACB2C11E4.jpg";
+        });
+
+        document.getElementById("s6").addEventListener("mouseover",function(){
+            document.getElementById("largePhoto").src="images/F74D0177-C8C8-480A-9566-98EA700A83FD.jpg";
+        });
+    </script>
+</body>
+</html>

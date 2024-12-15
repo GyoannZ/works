@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+/* loading画面設定 */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeOut 1.5s 2.5s forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.loading__logo {
+    opacity: 0;
+    animation: logo_fade 5s .5s forwards;
+    width: 200px;
+}
+
+@keyframes logo_fade {
+    0% {
+        opacity: 0;
+        transform: translate3d(200px, 200px, 0);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    90% {
+        opacity: 1;
+        transform: translate3d(200px, 200px, 0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate3d(200px, 200px, 0);
+    }
+}
+
+.bg .mask {
+    background: url(../images/mask-loading.png) no-repeat;
+    display: block;
+    content: '';
+    position: absolute;
+    top: -100vh;
+    right: 59vw;
+    background-size: 100% 100%;
+    width: 105vw;
+    height: 171vh;
+    z-index: 0;
+}
+
+
+
+/* loading画面設定 */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    /* background-color: #ecefc7; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeOut 1.5s 2.5s forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.loading__logo {
+    opacity: 0;
+    animation: logo_fade 3s .5s forwards;
+    width: 200px;
+}
+
+@keyframes logo_fade {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    30% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}

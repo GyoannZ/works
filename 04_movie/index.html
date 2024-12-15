@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="映画龍の歯医者サイト">
+    <meta name="keywords" content="The Dragon Dentist,映画,龍の歯医者">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/loginAnimation.js"></script>
+    <title>映画『The Dragon Dentist - 龍の歯医者』</title>
+</head>
+
+<body>
+    <div id="splash">
+        <div id="splash_logo"><img src="images/logo.png" alt="" class="fadeUp"></div>
+        <!--/splash-->
+    </div>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="header__wrapper">
+            <!-- ナビゲーション -->
+            <div class="openbtn"><span></span><span></span><span></span></div>
+            <nav class="header__navigation" id="nav">
+                <div class="navigation__list">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="#" id="story">STORY</a></li>
+                        <li><a href="#" id="characters">CHARACTERS</a></li>
+                        <li><a href="#" id="voiceCast">VOICE-CAST</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="logo__navigation">
+            <div class="header__logo">
+                <h1>
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="龍の歯医者">
+                    </a>
+                </h1>
+            </div>
+            <div class="navigation__out">
+                <nav class="header__navigation__out">
+                    <div class="navigation__list__out">
+                        <ul>
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="#" id="story1">STORY</a></li>
+                            <li><a href="#" id="characters1">CHARACTERS</a></li>
+                            <li><a href="#" id="voiceCast1">VOICE-CAST</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <p id="page-top"><a href="#"><span>TOP</span></a></p>
+    <!-- メインビジュアル -->
+    <div class="main__visual">
+        <img src="images/main1.png" alt="the dragon dentist">
+    </div>
+    <div id="youtube-area">
+        <div id="youtube"></div><!--youtube表示エリア-->
+        <div id="youtube-mask"></div><!--youtubeマスクエリア-->
+    </div>
+    <div class="content__area__story" id="aa">
+        <p class="text__story fade">STORY</p>
+        <article class="content__wrapper__story">
+            <div class="content__text__story">
+                <h2 class="fade">STORY</h2>
+                <div class="content__text__body__story">
+                    <p class="eachTextAnime">彼の国には龍が棲んでいる── 神話によれば、古の人々との契約により、龍は人を助け、人は龍を助けるという…</p>
+                    <p class="eachTextAnime">舞台は “龍の国”。主人公は、国の守護神 “龍”を虫歯菌から守る新米・歯医者の野ノ子。</p>
+                    <p class="eachTextAnime">隣国との戦争が激化する中、ある日彼女は、龍の歯の上で気絶した敵国の少年兵を見つける。</p>
+                    <p class="eachTextAnime">少年の名はベル。大きな災いの前に龍が起こすと言われる不思議な現象で、巨大な歯の中から生き返ったものだった。</p>
+                    <p class="eachTextAnime">自らが置かれた状況に戸惑うベル。そして彼を励まし、彼を龍の歯医者として受け入れる野ノ子。</p>
+                    <p class="eachTextAnime">激しい戦いに巻き込まれながら、二人はやがて自らの運命を受け入れて行くことに…</p>
+                    <p class="eachTextAnime">かつてない壮大なスケールで描かれる冒険ファンタジー！</p>
+                </div>
+            </div>
+            <!-- <div class="content__img__story">
+                <img class="fade" src="images/dragon_dentist-01-04.jpg" alt="The dragon dentist img01">
+                <img class="fade" src="images/dragon_dentist-02-01.jpg" alt="The dragon dentist img02">
+            </div> -->
+        </article>
+    </div>
+    <div class="content__area__characters" id="bb">
+        <p class="text__characters fade">CHARACTERS</p>
+        <p class="second__text__characters fade">CHARACTERS</p>
+        <article class="content__wrapper__characters">
+            <div class="content__text__characters">
+                <h2 class="fade">CHARACTERS</h2>
+                <div class="characters__out fade">
+                    <div class="characters__in">
+                        <p class="content__text__title__characters">岸井野ノ子</p>
+                        <p class="content__text__body__characters">
+                            「ご飯をお腹いっぱい食べられる」と聞いて受けた試験で、龍に選ばれて龍の歯医者といして働き始めた少女。性格は明るく活発で、龍の歯医者として経験が浅いものの、担っている使命についてはよく理解している。
+                        </p>
+                    </div>
+                    <div class="characters__img"><img src="images/nonoko.png" alt="岸井野ノ子"></div>
+                </div>
+                <div class="characters__out fade">
+                    <div class="characters__in">
+                        <p class="content__text__title__characters">ベルナール・オクタビアス</p>
+                        <p class="content__text__body__characters">
+                            セルペナーダ国の良家に育った、少年。予科士官学校を経てセルペナーダ軍に入隊し、若き予科士としてブランコら傭兵部隊を率いることになるが、生来の気の弱さから戦場では銃弾を一発も撃つことができず、ブランコによって殺されてしまう。<br>そのあと黄泉帰りと呼ばれる奇妙な現象により、龍の歯から出現し再び生を得て、敵方の龍の歯医者として働くことになった。
+                        </p>
+                    </div>
+                    <div class="characters__img"><img src="images/beru.png" alt="ベルナール・オクタビアス"></div>
+                </div>
+                <div class="characters__out fade">
+                    <div class="characters__in">
+                        <p class="content__text__title__characters">悟堂ヨ世夫</p>
+                        <p class="content__text__body__characters">
+                            12年前に起きた天狗虫の襲撃を生き延びた数少ないメンバーで、今では龍の歯医者たちのリーダー的存在。柔和な性格の持ち主。
+                        </p>
+                    </div>
+                    <div class="characters__img"><img src="images/godo.png" alt="悟堂ヨ世夫"></div>
+                </div>
+                <div class="characters__out fade">
+                    <div class="characters__in">
+                        <p class="content__text__title__characters">夏目柴名</p>
+                        <p class="content__text__body__characters">
+                            「柴名姐さん」の愛称で呼ばれている、後輩からの信頼も厚いベテランの歯医者。12年前に起きた天狗虫事件で、恋い慕っていた先輩である竹本を失い、傷心からある計画を進めていた。</p>
+                    </div>
+                    <div class="characters__img"><img src="images/shibana.png" alt="夏目柴名"></div>
+                </div>
+                <div class="characters__out fade">
+                    <div class="characters__in">
+                        <p class="content__text__title__characters">有栖川カンネ</p>
+                        <p class="content__text__body__characters">
+                            どこかクールな佇まいをした、少女の歯医者。</p>
+                    </div>
+                    <div class="characters__img"><img src="images/a.png" alt="有栖川カンネ"></div>
+                </div>
+                <div class="characters__out fade">
+                    <div class="characters__in">
+                        <p class="content__text__title__characters">佐藤修三</p>
+                        <p class="content__text__body__characters">
+                            野ノ子にとって先輩にあたる歯医者。胸から下げているのは、二都にも虫歯菌にも聞く“歯科イラズ”なる猛毒の入った小瓶。</p>
+                    </div>
+                    <div class="characters__img"><img src="images/shuzou.png" alt="佐藤修三"></div>
+                </div>
+                <div class="characters__out fade">
+                    <div class="characters__in">
+                        <p class="content__text__title__characters">サルバトール・ブランコ</p>
+                        <p class="content__text__body__characters">
+                            セルペナーダに雇われた傭兵の隊長。「不死身のブランコ」の異名を持ち、龍の歯を狙っている。</p>
+                    </div>
+                    <div class="characters__img"><img src="images/burango.png" alt="サルバトール・ブランコ"></div>
+                </div>
+            </div>
+        </article>
+    </div>
+    <div class="content__area__voice-cast" id="cc">
+        <p class="text__voice-cast fade">VOICE-CAST</p>
+        <p class="second__text__voice-cast fade">VOICE-CAST</p>
+        <article class="content__wrapper__voice-cast">
+            <div class="content__text__voice-cast">
+                <h2 class="fade">VOICE-CAST</h2>
+                <div class="voice-cast__out fade">
+                    <div class="voice-cast__img">
+                        <div class="voice__character">
+                            <img style="border-radius: 2rem 0 0 2rem;" src="images/kishii-nonoko-5856661e3cac9p.jpg"
+                                alt="岸井野ノ子,清水富美加">
+                            <p class="content__text__title__voice-cast">岸井野ノ子</p>
+                        </div>
+                        <div class="voice__character">
+                            <img style="border-radius: 0 2rem 2rem 0;" src="images/shimizu-fumika-58566761aeb54p.jpg"
+                                alt="岸井野ノ子,清水富美加">
+                            <p class="content__text__title__voice-cast">清水富美加</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="voice-cast__out fade">
+                    <div class="voice-cast__img">
+                        <div class="voice__character">
+                            <img style="border-radius: 2rem 0 0 2rem;" src="images/bell-585667b929e00p.jpg"
+                                alt="ベルナール・オクタビアス,岡本信彦">
+                            <p class="content__text__title__voice-cast">ベル</p>
+                        </div>
+                        <div class="voice__character">
+                            <img style="border-radius: 0 2rem 2rem 0;" src="images/nobuhiko-okamoto-5a93bb5b29aa8p.jpg"
+                                alt="岸井野ノ子,清水富美加">
+                            <p class="content__text__title__voice-cast">岡本信彦</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="voice-cast__out fade">
+                    <div class="voice-cast__img">
+                        <div class="voice__character">
+                            <img style="border-radius: 2rem 0 0 2rem;" src="images/godo-5856680881440p.jpg"
+                                alt="悟堂ヨ世夫,山寺宏一">
+                            <p class="content__text__title__voice-cast">悟堂ヨ世夫</p>
+                        </div>
+                        <div class="voice__character">
+                            <img style="border-radius: 0 2rem 2rem 0;" src="images/kouichi-yamadera-6312075d45b63p.jpg"
+                                alt="悟堂ヨ世夫,山寺宏一">
+                            <p class="content__text__title__voice-cast">山寺宏一</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="voice-cast__out fade">
+                    <div class="voice-cast__img">
+                        <div class="voice__character">
+                            <img style="border-radius: 2rem 0 0 2rem;" src="images/shibana-5856683f4f93bp.jpg"
+                                alt="夏目柴名,林原めぐみ">
+                            <p class="content__text__title__voice-cast">夏目柴名</p>
+                        </div>
+                        <div class="voice__character">
+                            <img style="border-radius: 0 2rem 2rem 0;"
+                                src="images/hayashibara-megumi-580391e646b5cp.jpg" alt="夏目柴名,林原めぐみ">
+                            <p class="content__text__title__voice-cast">林原めぐみ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="voice-cast__out fade">
+                    <div class="voice-cast__img">
+                        <div class="voice__character">
+                            <img style="border-radius: 2rem 0 0 2rem;" src="images/arisugawa-585668823fce0p.jpg"
+                                alt="有栖川カンネ,名塚佳織">
+                            <p class="content__text__title__voice-cast">有栖川</p>
+                        </div>
+                        <div class="voice__character">
+                            <img style="border-radius: 0 2rem 2rem 0;" src="images/kaori-nazuka-5a8b9e632b2eap.jpg"
+                                alt="有栖川カンネ,名塚佳織">
+                            <p class="content__text__title__voice-cast">名塚佳織</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+    <footer class="footer">
+        <img style="position: absolute; opacity: 0.2; height: 100vh; width: 100%;" src="images/black.jpg" alt="black">
+        <div class="footer__copyright">
+            <small>&copy; 2024 THE DRAGON DENTIST</small>
+        </div>
+    </footer>
+    <script src="js/nav.js"></script>
+    <script src="js/youtube.js"></script>
+    <script src="js/eachTextAnime.js"></script>
+    <script type="text/javascript">
+        const targets = document.getElementsByClassName('fade');
+        for (let i = targets.length; i--;) {
+            let observer = new IntersectionObserver((entries, observer) => {
+                for (let j = entries.length; j--;) {
+                    if (entries[j].isIntersecting) {
+                        entries[j].target.classList.add('active');
+                    } else {
+                        entries[j].target.classList.remove('active');
+                    }
+                }
+            });
+            observer.observe(targets[i]);
+        }
+    </script>
+    <script>
+        var story = document.querySelector('#story')
+        var characters = document.querySelector('#characters')
+        var voiceCast = document.querySelector('#voiceCast')
+        var story1 = document.querySelector('#story1')
+        var characters1 = document.querySelector('#characters1')
+        var voiceCast1 = document.querySelector('#voiceCast1')
+        var pageTop = document.querySelector('#page-top')
+        var aa = document.querySelector('#aa')
+        var bb = document.querySelector('#bb')
+        var cc = document.querySelector('#cc')
+        function to(toEl) {
+            let bridge = toEl;
+            let body = document.body;
+            let height = 0;
+            do {
+                height += bridge.offsetTop;
+                bridge = bridge.offsetParent;
+            } while (bridge !== body)
+            window.scrollTo({
+                top: height,
+                behavior: 'smooth'
+            })
+        }
+        pageTop.addEventListener('click', function (event) {
+            event.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        story.addEventListener('click', function (event) {
+            event.preventDefault();
+            to(aa)
+        });
+        characters.addEventListener('click', function (event) {
+            event.preventDefault();
+            to(bb)
+        });
+        voiceCast.addEventListener('click', function (event) {
+            event.preventDefault();
+            to(cc)
+        });
+        story1.addEventListener('click', function (event) {
+            event.preventDefault();
+            to(aa)
+        });
+        characters1.addEventListener('click', function (event) {
+            event.preventDefault();
+            to(bb)
+        });
+        voiceCast1.addEventListener('click', function (event) {
+            event.preventDefault();
+            to(cc)
+        });
+    </script>
+    <script>
+        window.onscroll = function () {
+            if (document.documentElement.scrollTop + document.body.scrollTop > 1200) {
+                document.getElementById("page-top").style.display = "block";
+            }
+            else {
+                document.getElementById("page-top").style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

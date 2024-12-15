@@ -1,0 +1,434 @@
+@charset "utf-8";
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "游ゴシック体", "Comic Sans MS", sans-serif;
+    background-image: url(../images/pattern5.png);
+    background-repeat: repeat;
+    background-color: rgba(36, 25, 25, 0.001);
+    background-blend-mode: lighten;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+}
+
+.sm-slider {
+    overflow: hidden;
+}
+
+.header {
+    margin-left: 10rem;
+}
+
+.header__wrapper {
+    position: fixed;
+    width: 96rem;
+    /* margin: -41rem auto; */
+    top: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff44;
+    border-radius: 5rem;
+}
+
+.header__wrapper img {
+    width: 10rem;
+    border-radius: 47%;
+    opacity: 0.9;
+}
+
+.header__wrapper h1 a {
+    transition: 0.3s;
+    
+}
+
+.header__wrapper h1 a:hover {
+    opacity: 0.8;
+
+}
+
+.navigation__main ul {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.navigation__main li a {
+    font-size: 2.1rem;
+    color: rgba(71, 55, 49, 0.788);
+    transition: 0.3s;
+    /* background: rgba(0, 0, 0, 0.3); */
+    margin: 1rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    
+}
+
+.navigation__main li a:hover {
+    opacity: 0.6;
+    
+}
+
+
+
+.text1 {
+    width: 60rem;
+    /* margin: 45rem auto 0 -5rem; */
+    margin-top: 70vh;
+    margin-bottom: 30vh;
+    align-items: center;
+}
+
+.big-rich-text {
+    font-size: 7rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.7)
+}
+
+/* index.html */
+.main__content {
+    margin: 0 auto;
+    margin-top: 14rem;
+    width: 96rem;
+    background-color: rgba(149, 149, 149, 0.6);
+    padding: 5rem;
+    border-radius: 5rem;
+}
+
+.main__content h2 {
+    font-size: 4rem;
+    padding: 2rem 0 4rem 0;
+    font-weight: bold;
+    margin-left: 2rem;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.content-area {
+    width: 50%;
+}
+
+.item__img {
+    width: 50%;
+}
+
+.item__img img {
+    width: 100%;
+    border-radius: 2.5rem;
+}
+
+.content-area-text {
+    font-size: 1.6rem;
+    line-height: 1.75;
+    text-align: justify;
+    padding: 2rem 5rem 0 1.7rem;
+}
+
+.menu1 {
+    display: flex;
+    margin: 5rem;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.menu__navigation ul li {
+    font-size: 2rem;
+    text-align: right;
+}
+
+.menu__navigation ul li a {
+    transition: 0.3s;
+}
+
+.menu__navigation ul li a:hover {
+    opacity: 0.6;
+}
+
+.menu__img {
+    width: 50%;
+}
+
+.menu__img img {
+    width: 100%;
+    border-radius: 2.5rem;
+}
+
+.menu__main h2 {
+    text-align: center;
+}
+
+.menu__main h3 {
+    margin: 2rem;
+    font-weight: bold;
+}
+
+.menu__main ul li {
+    text-align: center;
+    line-height: 1.5;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.subtitle-span {
+    font-size: 2rem;
+}
+
+.table__area {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    border: 0.1rem #3e3e3e solid;
+    text-align: center;
+
+}
+
+.table1 {
+    width: 100%;
+    margin: 2rem;
+}
+
+th,
+td {
+    /* border: 0.1rem #3e3e3e solid; */
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+.table1 th {
+    font-size: 1.4rem;
+}
+
+.tableStyle {
+    display: flex;
+    align-items: flex-end;
+}
+
+
+/* コンタクト.html */
+
+
+.contact-form {
+    margin-bottom: 5rem;
+}
+
+.contact-form form {
+    width: 100%;
+}
+
+.contact-form form ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 60rem;
+}
+
+.contact-form form ul li {
+    padding: 0.6rem;
+    margin-bottom: 0.1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-form form ul li#send {
+    margin-top: 0.6rem;
+    display: flex;
+    justify-content: end;
+}
+
+.contact-form form label {
+    width: 20%;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+    width: 70%;
+    padding: 2rem;
+    border: 0.1rem solid #3f312b;
+    border-radius: 0.4rem;
+    font-size: 1.6rem;
+}
+
+.contact-form form input:focus,
+.contact-form form textarea:focus {
+    background-color: #d8ccc6;
+    border: 0.2rem solid #86685c;
+}
+
+.contact-form form ul li#send button {
+    width: 20%;
+    padding: 2%;
+    background-color: #3f312b;
+    background-image: url(../images/two_eggs.png);
+    border: none;
+    border-radius: 0.4rem;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.contact-form form ul li#send button:hover {
+    background-color: #7c6a62;
+}
+
+.footer {
+    width: 96rem;
+    margin: 2rem auto;
+    text-align: center;
+    border-top: dotted 1px #3e3e3e;
+}
+
+.footer__flex {
+    display: flex;
+    justify-content: space-between;
+    width: 96rem;
+}
+
+.footer__info ul li {
+    text-align: left;
+    line-height: 1.4;
+}
+
+.footer h3 {
+    font-size: 3rem;
+    text-align: left;
+    padding: 2rem 0 2rem 0;
+}
+
+.footer__navigation {
+    text-align: right;
+}
+
+.footer__navigation ul {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.footer__navigation ul li a {
+    font-size: 2rem;
+    transition: 0.3s;
+}
+
+.footer__navigation ul li a:hover {
+    opacity: 0.4;
+}
+
+.online__menu__main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.online__menu__area {
+    width: 60%;
+}
+
+.online__menu__main ul li {
+    text-align: left;
+    line-height: 1.5;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.online__order__area {
+    width: 40%;
+
+}
+
+.online__main__content h2 {
+    font-size: 4rem;
+    padding: 2rem 0 4rem 0;
+    font-weight: bold;
+    margin-left: 2rem;
+}
+
+
+.online__order__area form {
+    margin-bottom: 2.8rem;
+    /* background-color: #3e3e3e; */
+    text-align: center;
+}
+
+.online__main__content {
+    margin: 0 auto;
+    margin-top: 14rem;
+    width: 120rem;
+    background-color: rgba(149, 149, 149, 0.6);
+    padding: 5rem;
+    border-radius: 5rem;
+}
+
+.minus,
+.plus {
+    /* background-color: #fff; */
+    width: 3rem;
+    text-align: center;
+    border-radius: 25%;
+    border: #6d6d6d;
+    border-style: solid;
+}
+
+.number {
+    /* background-color: #7c6a62; */
+    text-align: center;
+    width: 5rem;
+    border-radius: 2.5rem;
+    height: 2.2rem;
+
+}
+
+.price {
+    /* background-color: aquamarine; */
+    text-align: center;
+    width: 8rem;
+}
+
+.midashi-price {
+    margin-top: 1.5rem;
+}
+
+.buybtn-area {
+    /* background-color: #86685c; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.buybtn {
+    background-color: #3e3e3e;
+    margin-top: 2rem;
+    width: 20rem;
+    height: 5rem;
+    text-align: center;
+    border-radius: 25rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: rgb(193, 193, 193);
+}
+
+.buybtn-area a {
+    transition: all 0.3s;
+
+}
+
+.buybtn-area a:hover {
+    opacity: 0.7;
+}
+
+.form__message {
+    font-size: 1.2rem;
+    color: rgba(201, 54, 0, 0.973);
+    font-weight: bold;
+}
