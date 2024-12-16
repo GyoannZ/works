@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.js"></script>
+
+    <title>open Sesame</title>
+</head>
+
+<body>
+    <!-- ローディング画面エリア -->
+    <div id="splash">
+        <div id="splash_logo"><img src="images/chestLogo.svg" alt="宝箱" class="fadeUp"></div>
+    </div>
+
+    <!-- メインビジュアルエリア -->
+    <div class="main__area">
+        <div class="left__area">
+            <a href="video.html">
+                <div class="image-container">
+                    <img class="default-image" src="images/chest-svgrepo-com.svg" alt="close chest">
+                    <img class="hover-image" src="images/chest-treasure-svgrepo-com.svg" alt="open chest">
+                </div>
+            </a>
+        </div>
+        <div class="right__area">
+            <a href="chest/chestgame/">
+                <div class="image-container">
+                    <img class="default-image" src="images/chest-svgrepo-com.svg" alt="close chest">
+                    <img class="hover-image" src="images/chest-treasure-svgrepo-com.svg" alt="open chest">
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- waveエリア -->
+    <canvas id="waveCanvas"></canvas>
+    <canvas id="waveCanvas2"></canvas>
+    <canvas id="waveCanvas3"></canvas>
+    <!-- jsエリア -->
+    <script src="js/logo.js"></script>
+    <script src="js/wave.js"></script>
+</body>
+
+</html>

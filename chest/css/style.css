@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Aoboshi One", "游ゴシック体", "游ゴシック Medium", YuGothic, "Comic Sans MS", sans-serif;
+    width: 100%;
+    height: 100%;
+    /* background-color: #F2FCF8; */
+}
+
+/* Loading背景画面設定　*/
+#splash {
+    /*fixedで全面に固定*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background: #fff;
+    text-align: center;
+    color: #fff;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo img {
+    width: 100px;
+}
+
+/* fadeUpをするアイコンの動き */
+.fadeUp {
+    animation-name: fadeUpAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main__area {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left__area {
+    width: 50%;
+
+}
+
+.right__area {
+    width: 50%;
+}
+
+.right__area a,
+.left__area a {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.left__area img {
+    width: 100%;
+}
+
+.wave {
+    position: relative;
+    height: 200px;
+    /*何も表示されない場合は各波の親要素に高さを持たせましょう。*/
+    background: #fff;
+    /*背景を塗りつぶして重ねた波を表現したい場合は、波を描画する親要素に波と同じ背景色を設定しましょう。*/
+}
+
+canvas {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.image-container {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    top: 33%;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.image-container .hover-image {
+    opacity: 0;
+}
+
+.image-container:hover .default-image {
+    opacity: 0;
+}
+
+.image-container:hover .hover-image {
+    opacity: 1;
+}
+
+.video__area {
+    background-color: rgba(113, 113, 113, 0.1);
+
+}

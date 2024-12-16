@@ -1,0 +1,21 @@
+
+windows：
+
+CT18\CT18_chest\chest\chestgame
+
+このパスの中にゲームのindex.htmlがありますが、直接開こうとしたら”Error　Your browser does not allow to read local files.”というエラーメッセージが出ます
+
+今回の解決方法は、Pythonでローカルサーバーを作ってローカルファイルを読み込めるようにしました
+
+↓
+
+power shell をひらき
+
+パスを"chest"まで指定、"python3 -m http.server --cgi 8080"　を入力してenter
+
+そしてブラウザをひらき、検索欄に"http://localhost:8080/"で開く
+
+
+Mac:
+
+ターミナルで上記と同じ操作手順で作動確認済み。
