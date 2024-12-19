@@ -60,6 +60,10 @@ body {
     background: #005BAC;
 }
 
+.nav__list li {
+    position: relative;
+}
+
 
 .nav__list li a {
     display: block;
@@ -76,6 +80,42 @@ body {
 .nav__list li a:hover {
     background: #206DB5;
 }
+
+
+
+.sub__menu {
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: #005BAC;
+    padding: 0;
+    margin: 0;
+    width: 15vw;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out,transform 0.5s ease-in-out;
+    transform: translateX(-20px);
+}
+
+.sub__menu li a {
+    padding: 10px 0;
+    text-align: center;
+    color: #fcfcfc;
+    font-size: 1.4rem;
+    font-weight: normal;
+    transition: .5s;
+}
+
+.sub__menu li a:hover {
+    background: #206DB5;
+}
+
+.nav__list li:hover .sub__menu {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+}
+
 
 
 
