@@ -535,8 +535,12 @@ p{
 .project__image a img {
     width: 100%;
     border-radius: 20px;
+    transition: .5s;
 }
 
+.project__image a img:hover {
+    transform: scale(1.1);
+}
 
 /* footer */
 .footer__copyright {
