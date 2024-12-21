@@ -475,10 +475,15 @@ p{
     width: 55%;
 }
 
+
 .project__img a img {
     width: 100%;
     border-radius: 20px;
+    transition: .5s;
+}
 
+.project__img a img:hover {
+    transform: scale(1.1);
 }
 
 /* current__projects__area */
@@ -592,5 +597,4 @@ p{
     font-size: 3.8rem;
     text-align: center;
     color: #005BAC;
-
 }
